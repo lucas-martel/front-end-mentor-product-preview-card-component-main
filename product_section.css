@@ -1,0 +1,106 @@
+section.product-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10%;
+    user-select: none;
+}
+
+div.product-img{
+    border-radius: 3vmin 0 0 3vmin;
+    background-image: url(images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1.title-product{
+    color: var(--Verydarkblue);
+    font-size: 5vmin;
+}
+
+h1.title-product, span.actual-price{
+    font-family: var(--fraunces);
+}
+
+p.description-product, p.product-type{
+    font-size: 2.1vmin;
+}
+
+p.product-type{
+    letter-spacing: 0.5vmin;
+}
+
+div.prices{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.actual-price{
+    color: var(--Darkcyan);
+    font-size: 5vmin;
+}
+span.last-price{
+    text-decoration: line-through;
+    font-size: 2.3vmin;
+}
+
+div.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    align-self: center;
+    background-color: var(--Darkcyan);
+    padding: 5% 10%;
+    border-radius: 1vmin;
+    text-align: center;
+    font-size: 2vmin;
+    transition: background-color 100ms ease;
+}
+
+div.button-container:hover{
+    background-color: hsl(158, 36%, 17%);
+}
+
+div.button-container:active{
+    cursor: grab;
+    background-color: hsl(159, 52%, 10%);
+}
+
+div.button-container span{
+    margin-left: 2%;
+    color: var(--White);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    h1.title-product, span.actual-price{
+        font-size: 8vmin;
+    }
+    span.last-price, p.description-product, p.product-type, div.button-container{
+        font-size: 3.6vmin;
+    }
+
+    div.product-img{
+        border-radius: 3vmin 3vmin 0 0;
+        background-image: url(images/image-product-mobile.jpg);
+    }
+
+    section.product-section{
+        margin: 5%;
+    }
+
+    div.button-container{
+        padding: 2% 5%;
+    }
+
+    br{
+        display: none;
+    }
+}

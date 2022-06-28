@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mont);
+    color: var(--Darkgrayishblue);
+}
+
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --mont: 'Montserrat', sans-serif;
+    --fraunces: 'Fraunces', serif;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.product-container{
+    background-color: var(--White);
+    border-radius: 3vmin;
+    height: 75%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "img product";
+}
+
+img.product-img{
+    grid-area: img;
+}
+
+section.product-section{
+    grid-area: product;
+}
+
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    div.product-container{
+        height: 90%;
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "img"
+                              "product";
+    }   
+}
