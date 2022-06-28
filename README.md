@@ -1,6 +1,6 @@
 ### Links
 
-- Solution URL: [Add solution URL here](https://lucas-martel.github.io/front-end-mentor-product-preview-card-component-main/)
+- Solution URL: [https://lucas-martel.github.io/front-end-mentor-product-preview-card-component-main/]
 
 ### Built with
 - CSS custom properties
